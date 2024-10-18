@@ -3,7 +3,7 @@ let rentedCars = []; // Store rented cars
 
 // Fetch car data from json file
 async function fetchCars() {
-    const response = await fetch('http://localhost:4000/cars');
+    const response = await fetch('http://localhost:3000/cars');
     const data = await response.json();
     cars = data;
     displayCars();
@@ -45,7 +45,7 @@ function populateCarSelect() {
 }
 
 // Function to handle car rental
-document.getElementById('rental-form').addEventListener('submit', function(event) {
+document.getElementById('rental-form').addEventListener('submit', function (event) {
     event.preventDefault();
 
     const location = document.getElementById('location').value;
